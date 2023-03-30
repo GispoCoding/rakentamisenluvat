@@ -297,13 +297,13 @@ Hakemus, joka kohdistuu esim. rakentamislupa-asiaan
 **Ominaisuudet**
 
 | Nimi       | Name                                | Tyyppi                | Kardinaliteetti | Kuvaus                                                                                                               |
-|--------------|--------------|--------------|--------------|------------------|
+|---------------|---------------|---------------|---------------|---------------|
 | lupatyyppi | type of building permit application | [RakentamisluvanLaji] | 1               | Hakemuksen tyyppi kuvaa, mistä asiassa on kysymys, onko kyseessä rakentamislupa-, purkamislupa-, maisematyöasia jne. |
 
 **Assosiaatiot**
 
 | Roolinimi           | Role name         | Kohde                                                                                                                         | Kardinaliteetti | Kuvaus                                                                                                                    |
-|--------------|--------------|--------------|--------------|-----------------|
+|---------------|---------------|---------------|---------------|---------------|
 | rakennussuunnitelma | construction plan | [Rakennussuunnitelma](https://tietomallit.ymparisto.fi/rakennuskohteet/v1.0/looginenmalli/dokumentaatio/#rakennussuunnitelma) | 0..\*           | Rakentamista koskeva suunnitelma, joka on perustana rakennettavan kohteen erityissuunnittelulle ja muulle suunnittelulle. |
 | suunnitelmamalli    |                   | [Rakennustietomalli](https://tietomallit.ymparisto.fi/rakennuskohteet/v1.0/looginenmalli/dokumentaatio/#rakennustietomalli)   | 0..\*           |                                                                                                                           |
 
@@ -331,7 +331,7 @@ RakennetunYmpäristönLupa, Stereotyyppi: FeatureType (kohdetyyppi)
 **Ominaisuudet**
 
 | Nimi                | Name        | Tyyppi                | Kardinaliteetti | Kuvaus |
-|---------------|--------------|----------------|--------------|--------------|
+|---------------|---------------|---------------|---------------|---------------|
 | lupatyyppi          |             | [RakentamisluvanLaji] | 1               |        |
 | raukeamispäivämäärä | expiry date | date                  | 0..1            |        |
 
@@ -354,7 +354,7 @@ AlueidenkäyttöjaRakentamispäätös, Stereotyyppi: FeatureType
 | Roolinimi    | Role name           | Kohde                                                                                                                                     | Kardinaliteetti | Kuvaus                                                                              |
 |---------------|---------------|---------------|---------------|---------------|
 | toimenpide   | construction action | [RakennuskohteenToimenpide](https://tietomallit.ymparisto.fi/rakennuskohteet/v1.0/looginenmalli/dokumentaatio/#rakennuskohteentoimenpide) | 1..\*           | maankäyttöprosessi jossa määriteltyjen vaiheiden mukaisesti tuotetaan rakennuskohde |
-| jatkettuLupa |                     | Rakentamislupa                                                                                                                            | 1               |                                                                                     |
+| jatkettuLupa |                     | [Rakentamislupa]                                                                                                                          | 1               |                                                                                     |
 
 ### Purkamislupahakemus
 
@@ -450,7 +450,7 @@ Rakentamislupahakemukseen liittyvän rakentamishankkeen kuvaustiedot
 **Ominaisuudet**
 
 | Nimi                 | Name                                | Tyyppi               | Kardinaliteetti | Kuvaus                                                                                                                                  |
-|----------|----------|----------|----------|--------------------------------|
+|--------------|--------------|--------------|--------------|----------------|
 | toimenpide           |                                     | [HankkeenToimenpide] | 0..\*           | Liittyvän rakentamistoimenpiteen hankkeenaikainen edistymis- ja valmistumistieto                                                        |
 | hankkeenKuvaus       | description of construction project | [LanguageString]     | 0..\*           | Rakentamishankkeen sanallinen kuvaus                                                                                                    |
 | aloittamispäivämäärä | start date                          | date                 | 0..1            | Hankkeen aloittamispäivämäärä, päivämäärä, jolloin asiaan liittyvien rakentamistoimenpiteiden on katsottu alkaneeksi/arvioitu alkavaksi |
@@ -476,27 +476,27 @@ Rakennushankkeen viranomaiskatselmukset
 
 **Ominaisuudet**
 
-| Nimi                        | Name                                  | Tyyppi                       | Kardinaliteetti | Kuvaus                                                                                                                 |
-|------------|------------|------------|------------|--------------------------|
-| katselmuksenLaji            | type of inspection                    | RakentamisKatselmuksenLaji   | 1               | Kaavoitus- ja rakentamislain mukainen viranomaiskatselmuksen laji.                                                     |
-| toimituspäivämäärä          | inspection date                       | date                         | 1               | Katselmuksen pitopäivämäärä                                                                                            |
-| vaadittuLupamääräyksissä    | required by permit regulations        | boolean                      | 1               | Katselmuslajin mukainen katselmus on vaadittu lupapäätöksen määräyksissä                                               |
-| osittaisuus                 | partial/final                         | KatseluksenLopullisuudenLaji | 1               | Onko katselmus osittainen vai lopullinen (=kyseisen katselmuslajin viimeinen katselmus kyseisessä rakennushankkeessa). |
-| katselmuksenTilanne         | isnpection status                     | KatselmuksenTila             | 1               | Katselmuksen tilannetieto, arvot koodistosta Katselmuksen tilanne                                                      |
-| kohteenMuutos               |                                       | RakennuskohteenMuutos        | 1..\*           |                                                                                                                        |
-| käyttäänottohyväksyntä      |                                       | Käyttöönottohyväksyntä       | 0..\*           |                                                                                                                        |
-| katselmuksenKohteenTarkenne | specification of object of inspection | LanguageString               | 0..\*           | Katselmuksen kohteen tarkempi kuvaus (rakennuksen osa, laite, rappu, huoneisto\...)                                    |
-| huomautus                   | inspection remarks                    | LanguageString               | 0..\*           | Katselmuksessa havaitut huomautukset                                                                                   |
-| pöytäkirja                  |                                       | Liiteasiakirja               |                 |                                                                                                                        |
+| Nimi                        | Name                                  | Tyyppi                                                                                                                            | Kardinaliteetti | Kuvaus                                                                                                                 |
+|---------------|---------------|---------------|---------------|---------------|
+| katselmuksenLaji            | type of inspection                    | [RakentamishankkeenKatselmuksenLaji]                                                                                              | 1               | Kaavoitus- ja rakentamislain mukainen viranomaiskatselmuksen laji.                                                     |
+| toimituspäivämäärä          | inspection date                       | date                                                                                                                              | 1               | Katselmuksen pitopäivämäärä                                                                                            |
+| vaadittuLupamääräyksissä    | required by permit regulations        | boolean                                                                                                                           | 1               | Katselmuslajin mukainen katselmus on vaadittu lupapäätöksen määräyksissä                                               |
+| osittaisuus                 | partial/final                         | [KatsemuksenLopullisuudenLaji]                                                                                                    | 1               | Onko katselmus osittainen vai lopullinen (=kyseisen katselmuslajin viimeinen katselmus kyseisessä rakennushankkeessa). |
+| katselmuksenTilanne         | inspection status                     | [KatselmuksenTila]                                                                                                                | 1               | Katselmuksen tilannetieto, arvot koodistosta Katselmuksen tilanne                                                      |
+| kohteenMuutos               |                                       | [RakennuskohteenMuutos](https://tietomallit.ymparisto.fi/rakennuskohteet/v1.0/looginenmalli/dokumentaatio/#rakennuskohteenmuutos) | 1..\*           |                                                                                                                        |
+| käyttäänottohyväksyntä      |                                       | [Käyttöönottohyväksyntä]                                                                                                          | 0..\*           |                                                                                                                        |
+| katselmuksenKohteenTarkenne | specification of object of inspection | [LanguageString]                                                                                                                  | 0..\*           | Katselmuksen kohteen tarkempi kuvaus (rakennuksen osa, laite, rappu, huoneisto\...)                                    |
+| huomautus                   | inspection remarks                    | [LanguageString]                                                                                                                  | 0..\*           | Katselmuksessa havaitut huomautukset                                                                                   |
+| pöytäkirja                  |                                       | [Liiteasiakirja](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#liiteasiakirja)                   |                 |                                                                                                                        |
 
 **Assosiaatiot**
 
-| Roolinimi             | Role name | Kohde                     | Kardinaliteetti | Kuvaus                                                              |
+| Roolinimi             | Role name | Kohde                                                                                                                                     | Kardinaliteetti | Kuvaus                                                              |
 |---------------|---------------|---------------|---------------|---------------|
-| toimittaja            |           | Henkilö                   | 1               |                                                                     |
-| katselmoitutoimenpide |           | RakennuskohteenToimenpide | 0..\*           |                                                                     |
-| liittyväHanke         |           | Rakentamishanke           | 1..\*           | Rakentamislupahakemukseen liittyvän rakentamishankkeen kuvaustiedot |
-| läsnäolija            |           | Henkilö                   | 0..\*           | Katselmuksessa läsnäollut henkilö                                   |
+| toimittaja            |           | [Henkilö](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#henkil%C3%B6)                                    | 1               |                                                                     |
+| katselmoitutoimenpide |           | [RakennuskohteenToimenpide](https://tietomallit.ymparisto.fi/rakennuskohteet/v1.0/looginenmalli/dokumentaatio/#rakennuskohteentoimenpide) | 0..\*           |                                                                     |
+| liittyväHanke         |           | [Rakentamishanke]                                                                                                                         | 1..\*           | Rakentamislupahakemukseen liittyvän rakentamishankkeen kuvaustiedot |
+| läsnäolija            |           | [Henkilö](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#henkil%C3%B6)                                    | 0..\*           | Katselmuksessa läsnäollut henkilö                                   |
 
 ### HankkeenToimenpide
 
@@ -509,20 +509,16 @@ Kuvaa rakentamistoimepiteen edistymisen ja valmistumisen tilaa.
 **Ominaisuudet**
 
 | Nimi                              | Name                             | Tyyppi                          | Kardinaliteetti | Kuvaus                                                                                                                     |
-|-------------|-------------|-------------|-------------|---------------------|
-| rakentamistöidenAloituspäivämäärä | start date of construction works | date                            | 0..1            |                                                                                                                            
-                                                                                                                                                                                                                                                        
-                                                                                                                            Päivämäärä, jolloin rakentamistoimenpiteeseen liittyvät rakennustyöt katsotaan aloitetuiksi.                                |
-| valmistumispäivämäärä             | completion date                  | date                            | 0..1            |                                                                                                                            
-                                                                                                                                                                                                                                                        
-                                                                                                                            Päivämäärä, jolloin rakentamistoimenpide katsotaan kokonaan valmistuneeksi, esim. lopullisen loppukatselmuksen päivämäärä.  |
+|---------------|---------------|---------------|---------------|---------------|
+| rakentamistöidenAloituspäivämäärä | start date of construction works | Date                            | 0..1            | Päivämäärä, jolloin rakentamistoimenpiteeseen liittyvät rakennustyöt katsotaan aloitetuiksi.                               |
+| valmistumispäivämäärä             | completion date                  | Date                            | 0..1            | Päivämäärä, jolloin rakentamistoimenpide katsotaan kokonaan valmistuneeksi, esim. lopullisen loppukatselmuksen päivämäärä. |
 | toimenpiteenTila                  |                                  | RakennuskohteenToimenpiteenTila | 1               |                                                                                                                            |
 
 **Assosiaatiot**
 
-| Roolinimi  | Role name | Kohde                     | Kardinaliteetti | Kuvaus |
-|------------|-----------|---------------------------|-----------------|--------|
-| toimenpide |           | RekennuskohteenToimenpide | 1               |        |
+| Roolinimi  | Role name           | Kohde                                                                                                                                     | Kardinaliteetti | Kuvaus                                                                              |
+|--------------|--------------|----------------|--------------|--------------|
+| toimenpide | construction action | [RekennuskohteenToimenpide](https://tietomallit.ymparisto.fi/rakennuskohteet/v1.0/looginenmalli/dokumentaatio/#rakennuskohteentoimenpide) | 1               | maankäyttöprosessi jossa määriteltyjen vaiheiden mukaisesti tuotetaan rakennuskohde |
 
 ### Käyttöönottohyväksyntä
 
@@ -531,22 +527,20 @@ Englanninkielinen nimi: **Project action**
 Kuvaa käsitteen käyttöönottohyväksyntä, Stereotyyppi: DataType
 (tietotyyppi)
 
-Kuvaa rakentamistoimepiteen edistymisen ja valmistumisen tilaa.
-
 **Ominaisuudet**
 
-| Nimi                                | Name | Tyyppi  | Kardinaliteetti | Kuvaus                                                                                                                                                                                                                                                                                                                                               |
-|--------------|--------------|--------------|--------------|-----------------|
-| hyväksymispäivämäärä                |      | date    | 1               | Rakentamistoimenpiteen osittaisen valmistumisen, toimenpiteen alaisen rakentamiskohteen käyttöönottamisen päivämäärä. Uudisrakentamisen osalta tämä vastaa rakennuksen käyttöönottopäivämäärää, muutos- ja laajennustoimenpiteiden osalta ajankohtaa, jolloin laajennus- tai muutosalan osittaisesti tai kokonaan on hyväksytty käyttöönotettavaksi. |
-| hyväksyttyKäyttöönkokonaisuudessaan |      | boolean | 1               | Rakentamiskohde on hyväksytty käyttöönotettavaksi kokonaisuudessaan.                                                                                                                                                                                                                                                                                 |
+| Nimi                                | Name | Tyyppi  | Kardinaliteetti | Kuvaus                                                                                                                                                                                                                                                                                                                                              |
+|---------------|---------------|---------------|---------------|---------------|
+| hyväksymispäivämäärä                |      | date    | 1               | Rakentamistoimenpiteen osittaisen valmistumisen, toimenpiteen alaisen rakentamiskohtee käyttöönottamisen päivämäärä. Uudisrakentamisen osalta tämä vastaa rakennuksen käyttöönottopäivämäärää, muutos- ja laajennustoimenpiteiden osalta ajankohtaa, jolloin laajennus- tai muutosalan osittaisesti tai kokonaan on hyväksytty käyttöönotettavaksi. |
+| hyväksyttyKäyttöönkokonaisuudessaan |      | boolean | 1               | Rakentamiskohde on hyväksytty käyttöönotettavaksi kokonaisuudessaan.                                                                                                                                                                                                                                                                                |
 
 **Assosiaatiot**
 
-| Roolinimi            | Role name | Kohde                     | Kardinaliteetti | Kuvaus |
+| Roolinimi            | Role name | Kohde                                                                                                                                     | Kardinaliteetti | Kuvaus |
 |---------------|---------------|---------------|---------------|---------------|
-| hyväksyttyHuoneisto  |           | Huoneisto                 | 0..\*           |        |
-| hyväksyttyToimenpide |           | RakennusKohteenToimenpide | 0..\*           |        |
-| hyväksyttyKohde      |           | Rakennuskohde             | 1..\*           |        |
+| hyväksyttyHuoneisto  |           | [Huoneisto](https://tietomallit.ymparisto.fi/rakennuskohteet/v1.0/looginenmalli/dokumentaatio/#huoneisto)                                 | 0..\*           |        |
+| hyväksyttyToimenpide |           | [RakennusKohteenToimenpide](https://tietomallit.ymparisto.fi/rakennuskohteet/v1.0/looginenmalli/dokumentaatio/#rakennuskohteentoimenpide) | 0..\*           |        |
+| hyväksyttyKohde      |           | [Rakennuskohde](https://tietomallit.ymparisto.fi/rakennuskohteet/v1.0/looginenmalli/dokumentaatio/#rakennuskohde)                         | 1..\*           |        |
 
 ## Koodistot
 
