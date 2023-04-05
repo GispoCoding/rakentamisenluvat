@@ -1,5 +1,8 @@
 ---
-
+layout: "default"
+description: ""
+id: "dokumentaatio"
+status: "Keskeneräinen"
 ---
 
 # Loogisen tason rakentamiseen liittyvien lupapäätösten tietomalli
@@ -119,14 +122,14 @@ Täsmälleen yhdestä pisteestä koostuva geometriatyyppi. Määritelty rajapint
 
 Englanninkielinen nimi: **permit application**
 
-Kuvaa käsitteen Rakentamislupahakemus, erikoistaa luokkaa RakennetunympäristönLupahakemus, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Rakentamislupahakemus, erikoistaa luokkaa [RakennetunympäristönLupahakemus](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupahakemus), Stereotyyppi: FeatureType (kohdetyyppi)
 
 Hakemus, joka kohdistuu esim. rakentamislupa-asiaan
 
 **Ominaisuudet**
 
 | Nimi       | Name                                | Tyyppi                | Kardinaliteetti | Kuvaus                                                                                                               |
-|--------------|---------------|---------------|---------------|---------------|
+|---------------|---------------|---------------|---------------|---------------|
 | lupatyyppi | type of building permit application | [RakentamisluvanLaji] | 1               | Hakemuksen tyyppi kuvaa, mistä asiassa on kysymys, onko kyseessä rakentamislupa-, purkamislupa-, maisematyöasia jne. |
 
 **Assosiaatiot**
@@ -138,7 +141,7 @@ Hakemus, joka kohdistuu esim. rakentamislupa-asiaan
 
 ### RakentamislupaAsia
 
-Englanninkielinen nimi: **käännös tähän**
+Englanninkielinen nimi:
 
 Kuvaa käsitteen RakentamislupaAsia, erikoistaa luokkaa [RakennetunYmpäristönLupaAsia](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupaasia), Stereotyyppi: FeatureType (kohdetyyppi)
 
@@ -150,9 +153,9 @@ Kuvaa käsitteen RakentamislupaAsia, erikoistaa luokkaa [RakennetunYmpäristönL
 
 ### Rakentamislupa
 
-Englanninkielinen nimi: **käännös tähän**
+Englanninkielinen nimi: **building permit**
 
-Kuvaa käsitteen Rakentamislupa, erikoistaa luokkaa RakennetunYmpäristönLupa, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Rakentamislupa, erikoistaa luokkaa [RakennetunYmpäristönLupa](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupa), Stereotyyppi: FeatureType (kohdetyyppi)
 
 **Ominaisuudet**
 
@@ -163,9 +166,9 @@ Kuvaa käsitteen Rakentamislupa, erikoistaa luokkaa RakennetunYmpäristönLupa, 
 
 ### ToimenpiteenJatkoaikapäätös
 
-Englanninkielinen nimi: **käännös tähän**
+Englanninkielinen nimi:
 
-Kuvaa käsitteen ToimenpiteenJatkoaikapäätös, erikoistaa luokkaa AlueidenkäyttöjaRakentamispäätös, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen ToimenpiteenJatkoaikapäätös, erikoistaa luokkaa [AlueidenkäyttöjaRakentamispäätös](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#alueidenk%C3%A4ytt%C3%B6jarakentamisp%C3%A4%C3%A4t%C3%B6s), Stereotyyppi: FeatureType (kohdetyyppi)
 
 **Ominaisuudet**
 
@@ -182,15 +185,15 @@ Kuvaa käsitteen ToimenpiteenJatkoaikapäätös, erikoistaa luokkaa Alueidenkäy
 
 ### Purkamislupahakemus
 
-Englanninkielinen nimi: **käännös tähän**
+Englanninkielinen nimi:
 
-Kuvaa käsitteen Purkamislupahakemus, erikoistaa luokkaa RakennetunYmpäristönLupahakemus, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Purkamislupahakemus, erikoistaa luokkaa [RakennetunYmpäristönLupahakemus](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupahakemus), Stereotyyppi: FeatureType (kohdetyyppi)
 
 ### PurkamislupaAsia
 
-Englanninkielinen nimi: **käännös tähän**
+Englanninkielinen nimi:
 
-Kuvaa käsitteen PurkamislupaAsia, erikoistaa luokkaa RakennetunYmpäristönLupaAsia, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen PurkamislupaAsia, erikoistaa luokkaa [RakennetunYmpäristönLupaAsia](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupaasia), Stereotyyppi: FeatureType (kohdetyyppi)
 
 **Assosiaatiot**
 
@@ -200,21 +203,21 @@ Kuvaa käsitteen PurkamislupaAsia, erikoistaa luokkaa RakennetunYmpäristönLupa
 
 ### Purkamislupa
 
-Englanninkielinen nimi: **käännös tähän**
+Englanninkielinen nimi:
 
-Kuvaa käsitteen Purkamislupa, erikoistaa luokkaa RakennetunYmpäristönLupa, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Purkamislupa, erikoistaa luokkaa [RakennetunYmpäristönLupa](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupa), Stereotyyppi: FeatureType (kohdetyyppi)
 
 ### Maisematyölupahakemus
 
-Englanninkielinen nimi: **käännös tähän**
+Englanninkielinen nimi:
 
-Kuvaa käsitteen Maisematyölupahakemus, erikoistaa luokkaa RakennetunYmpäristönLupahakemus, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Maisematyölupahakemus, erikoistaa luokkaa [RakennetunYmpäristönLupahakemus](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupahakemus), Stereotyyppi: FeatureType (kohdetyyppi)
 
 ### MaisematyölupaAsia
 
-Englanninkielinen nimi: **käännös tähän**
+Englanninkielinen nimi:
 
-Kuvaa käsitteen MaisematyölupaAsia, erikoistaa luokkaa RakennetunYmpäristönLupaAsia, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen MaisematyölupaAsia, erikoistaa luokkaa [RakennetunYmpäristönLupaAsia](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupaasia), Stereotyyppi: FeatureType (kohdetyyppi)
 
 **Assosiaatiot**
 
@@ -224,21 +227,21 @@ Kuvaa käsitteen MaisematyölupaAsia, erikoistaa luokkaa RakennetunYmpäristönL
 
 ### Maisematyölupa
 
-Englanninkielinen nimi: **käännös tähän**
+Englanninkielinen nimi:
 
-Kuvaa käsitteen Maisematyölupa, erikoistaa luokkaa RakennetunYmpäristönLupa, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Maisematyölupa, erikoistaa luokkaa [RakennetunYmpäristönLupa](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupa), Stereotyyppi: FeatureType (kohdetyyppi)
 
 ### Poikkeamislupahakemus
 
-Englanninkielinen nimi: **käännös tähän**
+Englanninkielinen nimi:
 
-Kuvaa käsitteen Poikkeamislupahakemus, erikoistaa luokkaa RakennetunYmpäristönLupahakemus, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Poikkeamislupahakemus, erikoistaa luokkaa [RakennetunYmpäristönLupahakemus](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupahakemus), Stereotyyppi: FeatureType (kohdetyyppi)
 
 ### PoikkeamislupaAsia
 
-Englanninkielinen nimi: **käännös tähän**
+Englanninkielinen nimi:
 
-Kuvaa käsitteen PoikkeamislupaAsia, erikoistaa luokkaa RakennetunYmpäristönLupaAsia, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen PoikkeamislupaAsia, erikoistaa luokkaa [RakennetunYmpäristönLupaAsia](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupaasia), Stereotyyppi: FeatureType (kohdetyyppi)
 
 **Assosiaatiot**
 
@@ -250,7 +253,7 @@ Kuvaa käsitteen PoikkeamislupaAsia, erikoistaa luokkaa RakennetunYmpäristönLu
 
 Englanninkielinen nimi: **käännös tähän**
 
-Kuvaa käsitteen Poikkeamislupa, erikoistaa luokkaa RakennetunYmpäristönLupa, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Poikkeamislupa, erikoistaa luokkaa [RakennetunYmpäristönLupa](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupa), Stereotyyppi: FeatureType (kohdetyyppi)
 
 ## Hankkeet ja katselmukset
 
@@ -258,7 +261,7 @@ Kuvaa käsitteen Poikkeamislupa, erikoistaa luokkaa RakennetunYmpäristönLupa, 
 
 Englanninkielinen nimi: **construction project**
 
-Kuvaa käsitteen Rakentamishanke, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Rakentamishanke, erikoistaa luokkaa [VersioituObjekti](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#versioituobjekti), Stereotyyppi: FeatureType (kohdetyyppi)
 
 Rakentamislupahakemukseen liittyvän rakentamishankkeen kuvaustiedot
 
@@ -273,19 +276,18 @@ Rakentamislupahakemukseen liittyvän rakentamishankkeen kuvaustiedot
 
 **Assosiaatiot**
 
-| Roolinimi           | Role name  | Kohde                                                                                                                                         | Kardinaliteetti | Kuvaus                                                                                                                                                                     |
+| Roolinimi           | Role name | Kohde                                                                                                                                         | Kardinaliteetti | Kuvaus                                                                                                                                                                     |
 |---------------|---------------|---------------|---------------|---------------|
-| toimitettuKatselmus | inspection | [Katselmus]                                                                                                                                   | 0..\*           |                                                                                                                                                                            |
-| vaadittuLupa        |            | [RakennetunYmpäristönLupa](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupa) | 0..\*           | Lupapäätös, joka mahdollistaa rakentamishankkeen toteuttamisen                                                                                                             |
-| vastaavaTyönjohtaja |            | [Henkilö](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#henkil%C3%B6)                                        | 1               | henkilö, jonka tehtävänä on johtaa rakennustyötä                                                                                                                           |
-| suunnittelija       |            | [Toimija](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#toimija)                                             | 0..\*           | henkilö, jonka tehtävänä on laatia rakentamista koskevia suunnitelmia ja selvityksiä ja jonka tulee täyttää lainsäädännössä annetut tehtäväkohtaiset kelpoisuusvaatimukset |
-| hankkeeseenRyhtyvä  |            | [Toimija](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#toimija)                                             | 1               | Rakentamishankkeeseen ryhtyvä                                                                                                                                              |
+| vaadittuLupa        |           | [RakennetunYmpäristönLupa](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#rakennetunymp%C3%A4rist%C3%B6nlupa) | 0..\*           | Lupapäätös, joka mahdollistaa rakentamishankkeen toteuttamisen                                                                                                             |
+| vastaavaTyönjohtaja |           | [Henkilö](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#henkil%C3%B6)                                        | 1               | henkilö, jonka tehtävänä on johtaa rakennustyötä                                                                                                                           |
+| suunnittelija       |           | [Toimija](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#toimija)                                             | 0..\*           | henkilö, jonka tehtävänä on laatia rakentamista koskevia suunnitelmia ja selvityksiä ja jonka tulee täyttää lainsäädännössä annetut tehtäväkohtaiset kelpoisuusvaatimukset |
+| hankkeeseenRyhtyvä  |           | [Toimija](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#toimija)                                             | 1               | Rakentamishankkeeseen ryhtyvä                                                                                                                                              |
 
 ### Katselmus
 
 Englanninkielinen nimi: **Inspection**
 
-Kuvaa käsitteen Katselmus, Stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Katselmus, erikoistaa luokkaa [VersioituObjekti](https://tietomallit.ymparisto.fi/ry-yhteiset/v1.0/looginenmalli/dokumentaatio/#versioituobjekti), Stereotyyppi: FeatureType (kohdetyyppi)
 
 Rakennushankkeen viranomaiskatselmukset
 
@@ -337,7 +339,7 @@ Kuvaa rakentamistoimepiteen edistymisen ja valmistumisen tilaa.
 
 ### Käyttöönottohyväksyntä
 
-Englanninkielinen nimi: **Project action**
+Englanninkielinen nimi:
 
 Kuvaa käsitteen käyttöönottohyväksyntä, Stereotyyppi: DataType (tietotyyppi)
 
